@@ -24,4 +24,4 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'httparty'
+gem 'httparty', '0.13.5'

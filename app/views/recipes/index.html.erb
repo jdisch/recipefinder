@@ -1,0 +1,20 @@
+<h1>Searching for - <%= @search_text %></h1>
+
+<table border = "1">
+	<tr>
+		<th>Thumbnail</th>
+		<th>Title</th>
+		<th>Social Rank</th>
+	</tr>
+
+	<% @recipes.each do |row| %>
+		<tr class=<%= cycle('even', 'odd') %>>
+			<td><%= link_to(image_tag(row['image_url'], size: "200x200"), row["f2f_url"]) %></td>
+			<td><%= link_to(sanitize(row["title"]), row["f2f_url"]) %></td>
+			<td><%= row["social_rank"] %></td>
+		</tr>
+	<% end %>
+
+</table>
+
+<p>Find me in app/views/recipes/index.html.erb</p>
